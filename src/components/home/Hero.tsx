@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center hero-bg overflow-hidden pt-32 pb-20">
+    <section className="relative min-h-[90vh] flex items-center justify-center hero-bg overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20">
       {/* Grid bg overlay */}
       <div className="absolute inset-0 grid-pattern opacity-40" />
 
@@ -15,39 +15,45 @@ export default function Hero() {
           {/* Left Column - Content */}
           <div className="lg:col-span-7 text-left">
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 mb-6">
-              <span className="tag">
+            <div className="inline-flex items-center gap-2 mb-5 sm:mb-6">
+              <span className="tag text-[0.72rem] sm:text-sm">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
                 CraftedClicks Technologies
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6 text-white">
+            <h1 className="text-[2.1rem] sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.05] mb-5 sm:mb-6 text-white">
               Instant Solutions <br />
               for your <span className="gradient-text">Business.</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-[#94a3b8] mb-10 leading-relaxed max-w-2xl">
+            <p className="text-[0.97rem] sm:text-lg md:text-xl text-[#94a3b8] mb-8 sm:mb-10 leading-relaxed max-w-2xl">
               We design and develop modern, fast, and conversion-focused websites and mobile applications that help businesses expand, attract leads, and scale efficiently.
             </p>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
               <Link
                 href="/contact"
                 id="hero-cta-contact"
-                className="btn-glow animate-pulse-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full text-base font-bold hover:from-cyan-400 hover:to-blue-400 transition-all w-full sm:w-auto text-center"
+                className="btn-glow animate-pulse-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-bold hover:from-cyan-400 hover:to-blue-400 transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2"
               >
-                Contact Us
+                <span>Contact Us</span>
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </Link>
               <Link
                 href="/portfolio"
                 id="hero-cta-work"
-                className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-white/10 hover:border-white/20 transition-all w-full sm:w-auto text-center"
+                className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-white/10 hover:border-white/20 transition-all w-full sm:w-auto text-center"
               >
-                Explore Work
+                <span>Explore Work</span>
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M7 7h10v10" />
+                </svg>
               </Link>
             </div>
           </div>

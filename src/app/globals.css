@@ -29,9 +29,20 @@ body {
   background-color: #020817;
   color: #f8fafc;
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, p {
+  overflow-wrap: anywhere;
 }
 
 /* Gradient text utility */
@@ -232,6 +243,52 @@ body {
   background: rgba(2, 8, 23, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 8vw, 2.85rem);
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  p {
+    font-size: 0.97rem;
+    line-height: 1.7;
+  }
+
+  button,
+  a[class*="rounded-full"],
+  .mobile-nav a {
+    min-height: 44px;
+  }
+
+  .whatsapp-btn {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .scroll-top-btn {
+    width: 46px;
+    height: 46px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-btn svg,
+  .scroll-top-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 
 /* Grid pattern overlay */

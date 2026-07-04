@@ -21,18 +21,18 @@ export default function Footer() {
                 Crafted<span className="gradient-text">Clicks</span>
               </span>
             </Link>
-            <p className="text-[#64748b] text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-[#64748b] text-[0.95rem] leading-relaxed mb-6 max-w-sm">
               We design and build modern, fast, and conversion-focused websites and systems for companies that want to grow.
             </p>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-[#64748b] text-sm">
-                <span className="text-cyan-400">📍</span> 123 Digital Ave, Tech District, CA 94102
+              <li className="flex items-center gap-3 text-[#64748b] text-[0.95rem]">
+                <span className="text-cyan-400 text-lg shrink-0">📍</span> 123 Digital Ave, Tech District, CA 94102
               </li>
-              <li className="flex items-center gap-3 text-[#64748b] text-sm">
-                <span className="text-cyan-400">📞</span> +1 (555) 123-4567
+              <li className="flex items-center gap-3 text-[#64748b] text-[0.95rem]">
+                <span className="text-cyan-400 text-lg shrink-0">📞</span> +1 (555) 123-4567
               </li>
-              <li className="flex items-center gap-3 text-[#64748b] text-sm">
-                <span className="text-cyan-400">✉️</span> hello@craftedclicks.com
+              <li className="flex items-center gap-3 text-[#64748b] text-[0.95rem]">
+                <span className="text-cyan-400 text-lg shrink-0">✉️</span> hello@craftedclicks.com
               </li>
             </ul>
           </div>
@@ -73,12 +73,12 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[#475569] text-sm">
+          <p className="text-[#475569] text-[0.95rem] text-center sm:text-left">
             &copy; {new Date().getFullYear()} CraftedClicks. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {legal.map((l) => (
-              <Link key={l.href} href={l.href} className="text-[#475569] hover:text-cyan-400 transition-colors text-sm">
+              <Link key={l.href} href={l.href} className="text-[#475569] hover:text-cyan-400 transition-colors text-[0.95rem]">
                 {l.label}
               </Link>
             ))}
