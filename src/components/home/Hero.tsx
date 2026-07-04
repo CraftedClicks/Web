@@ -38,7 +38,7 @@ export default function Hero() {
               <Link
                 href="/contact"
                 id="hero-cta-contact"
-                className="btn-glow animate-pulse-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-bold hover:from-cyan-400 hover:to-blue-400 transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2"
+                className="btn-glow animate-pulse-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 sm:px-8 py-4 rounded-full text-sm sm:text-base font-bold hover:from-cyan-400 hover:to-blue-400 transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 <span>Contact Us</span>
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,7 +48,7 @@ export default function Hero() {
               <Link
                 href="/portfolio"
                 id="hero-cta-work"
-                className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-white/10 hover:border-white/20 transition-all w-full sm:w-auto text-center"
+                className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-6 sm:px-8 py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-white/10 hover:border-white/20 transition-all w-full sm:w-auto text-center whitespace-nowrap"
               >
                 <span>Explore Work</span>
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

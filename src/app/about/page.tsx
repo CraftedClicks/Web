@@ -82,7 +82,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 text-center">
         <h2 className="text-3xl font-black text-white mb-4">Ready to work together?</h2>
-        <Link href="/contact" className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-block">
+        <Link href="/contact" className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-flex items-center justify-center whitespace-nowrap">
           Start a Project
         </Link>
       </section>

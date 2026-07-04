@@ -21,7 +21,7 @@ export default function ContactCTA() {
           <Link
             href="/contact"
             id="cta-contact-us"
-            className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-4.5 rounded-full text-base font-bold hover:from-cyan-400 hover:to-blue-400 transition-all text-center"
+            className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-4 rounded-full text-base font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-flex items-center justify-center whitespace-nowrap"
           >
             Contact Us
           </Link>

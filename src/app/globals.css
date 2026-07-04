@@ -166,8 +166,8 @@ h1, h2, h3, h4, p {
 /* WhatsApp float button */
 .whatsapp-btn {
   position: fixed;
-  bottom: 32px;
-  left: 32px;
+  bottom: 98px;
+  right: 32px;
   z-index: 100;
   width: 56px;
   height: 56px;
@@ -361,8 +361,8 @@ h1, h2, h3, h4, p {
   .whatsapp-btn {
     width: 48px;
     height: 48px;
-    bottom: 16px;
-    left: 16px;
+    bottom: 76px;
+    right: 16px;
   }
 
   .scroll-top-btn {

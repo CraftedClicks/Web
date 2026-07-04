@@ -55,7 +55,7 @@ export default async function ServiceDetailPage(props: PageProps<'/services/[slu
         </div>
         <Link
           href="/contact"
-          className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-block"
+          className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-flex items-center justify-center whitespace-nowrap"
         >
           Get a Quote for {service.title}
         </Link>

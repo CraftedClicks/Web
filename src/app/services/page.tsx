@@ -111,7 +111,7 @@ export default function ServicesPage() {
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl font-black mb-4">Not sure which service you need?</h2>
           <p className="text-[#94a3b8] mb-8">Let us help. Book a free 30-minute consultation and we will map out exactly what your business needs.</p>
-          <Link href="/contact" className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-block">
+          <Link href="/contact" className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-flex items-center justify-center whitespace-nowrap">
             Book a Free Consultation
           </Link>
         </div>

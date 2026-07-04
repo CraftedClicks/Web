@@ -54,7 +54,7 @@ export default async function BlogPostPage(props: PageProps<'/blog/[slug]'>) {
           </p>
         </div>
         <div className="mt-12 pt-8 border-t border-white/5">
-          <Link href="/contact" className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-block">
+          <Link href="/contact" className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-flex items-center justify-center whitespace-nowrap">
             Work With Us
           </Link>
         </div>

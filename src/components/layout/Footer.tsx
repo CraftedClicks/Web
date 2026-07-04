@@ -29,10 +29,10 @@ export default function Footer() {
                 <span className="text-cyan-400 text-lg shrink-0">📍</span> 123 Digital Ave, Tech District, CA 94102
               </li>
               <li className="flex items-center gap-3 text-[#64748b] text-[0.95rem]">
-                <span className="text-cyan-400 text-lg shrink-0">📞</span> +1 (555) 123-4567
+                <span className="text-cyan-400 text-lg shrink-0">📞</span> <a href="tel:+919970968101" className="hover:text-cyan-400 transition-colors">+91 99709 68101</a>
               </li>
               <li className="flex items-center gap-3 text-[#64748b] text-[0.95rem]">
-                <span className="text-cyan-400 text-lg shrink-0">✉️</span> hello@craftedclicks.com
+                <span className="text-cyan-400 text-lg shrink-0">✉️</span> <a href="mailto:sourabh3527@gmail.com" className="hover:text-cyan-400 transition-colors">sourabh3527@gmail.com</a>
               </li>
             </ul>
           </div>

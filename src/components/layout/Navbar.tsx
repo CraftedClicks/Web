@@ -36,17 +36,17 @@ export default function Navbar() {
         <div className="hidden lg:block bg-[#0f172a]/80 border-b border-white/5 text-[11px] sm:text-xs text-[#94a3b8] py-2 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
-              <a href="mailto:hello@craftedclicks.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+              <a href="mailto:sourabh3527@gmail.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
                 <svg className="w-3.5 h-3.5 text-cyan-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                hello@craftedclicks.com
+                sourabh3527@gmail.com
               </a>
-              <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+              <a href="tel:+919970968101" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
                 <svg className="w-3.5 h-3.5 text-cyan-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                +1 (555) 123-4567
+                +91 99709 68101
               </a>
             </div>
             <div className="hidden sm:block">

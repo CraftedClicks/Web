@@ -41,7 +41,7 @@ export default function AboutSection() {
             </p>
             <Link
               href="/about"
-              className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3.5 rounded-full text-sm font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-block"
+              className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-full text-sm font-bold hover:from-cyan-400 hover:to-blue-400 transition-all inline-flex items-center justify-center whitespace-nowrap"
             >
               Read More
             </Link>
