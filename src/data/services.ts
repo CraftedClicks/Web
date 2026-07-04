@@ -1,0 +1,58 @@
+import type { Service } from '@/types/service';
+
+export const services: Service[] = [
+  {
+    id: '1',
+    title: 'Web Design',
+    description: 'Stunning, conversion-focused designs that captivate visitors and reflect your brand identity perfectly.',
+    icon: 'design',
+    slug: 'web-design',
+    color: 'from-cyan-500 to-blue-500',
+    features: ['Custom UI/UX Design', 'Brand Identity', 'Responsive Layouts', 'Design Systems', 'Prototype & Wireframing'],
+  },
+  {
+    id: '2',
+    title: 'Web Development',
+    description: 'Fast, secure, and scalable web applications built with Next.js, React, and modern tech stacks.',
+    icon: 'code',
+    slug: 'web-development',
+    color: 'from-blue-500 to-violet-500',
+    features: ['Next.js / React', 'API Integration', 'Performance Optimization', 'SEO-ready Architecture', 'CMS Integration'],
+  },
+  {
+    id: '3',
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile apps for iOS and Android that users love and return to.',
+    icon: 'mobile',
+    slug: 'mobile-apps',
+    color: 'from-violet-500 to-purple-500',
+    features: ['React Native', 'iOS & Android', 'App Store Publishing', 'Push Notifications', 'Offline Support'],
+  },
+  {
+    id: '4',
+    title: 'SEO & Digital Marketing',
+    description: 'Rank higher on Google, attract qualified traffic, and grow your business with data-driven SEO.',
+    icon: 'seo',
+    slug: 'seo',
+    color: 'from-emerald-500 to-cyan-500',
+    features: ['Technical SEO Audit', 'Keyword Strategy', 'On-page Optimization', 'Link Building', 'Analytics & Reporting'],
+  },
+  {
+    id: '5',
+    title: 'E-Commerce Solutions',
+    description: 'Powerful online stores built on Shopify, WooCommerce, or custom platforms that convert visitors to buyers.',
+    icon: 'ecommerce',
+    slug: 'ecommerce',
+    color: 'from-amber-500 to-orange-500',
+    features: ['Shopify Development', 'Payment Gateways', 'Inventory Management', 'Product Optimization', 'Conversion Optimization'],
+  },
+  {
+    id: '6',
+    title: 'Website Maintenance',
+    description: 'Keep your website secure, updated, and running at peak performance with our maintenance plans.',
+    icon: 'maintenance',
+    slug: 'maintenance',
+    color: 'from-rose-500 to-pink-500',
+    features: ['Security Updates', 'Performance Monitoring', 'Content Updates', 'Backup Management', '24/7 Support'],
+  },
+];

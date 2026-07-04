@@ -1,0 +1,40 @@
+import type { BlogPost } from '@/types/blog';
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: '10 Web Design Trends Dominating 2025',
+    excerpt: 'From glassmorphism to AI-generated UI, discover the design trends reshaping modern web experiences and how to implement them in your projects.',
+    slug: 'web-design-trends-2025',
+    category: 'Design',
+    date: 'June 28, 2025',
+    readTime: '6 min read',
+    author: 'Alex Turner',
+    authorTitle: 'Lead Designer',
+    color: 'from-cyan-500 to-blue-500',
+  },
+  {
+    id: '2',
+    title: 'Why Your Business Website Is Losing You Leads',
+    excerpt: 'Most business websites make the same 7 critical mistakes that silently kill conversions. Here is how to identify and fix them before they cost you more.',
+    slug: 'why-your-website-loses-leads',
+    category: 'Business',
+    date: 'June 14, 2025',
+    readTime: '8 min read',
+    author: 'Lisa Chen',
+    authorTitle: 'Head of Strategy',
+    color: 'from-violet-500 to-purple-500',
+  },
+  {
+    id: '3',
+    title: 'Next.js vs React: Which Should You Choose in 2025?',
+    excerpt: 'A deep dive into the technical and business tradeoffs between Next.js and plain React for your next web project, with real-world benchmarks.',
+    slug: 'nextjs-vs-react-2025',
+    category: 'Development',
+    date: 'May 30, 2025',
+    readTime: '10 min read',
+    author: 'Daniel Park',
+    authorTitle: 'Lead Developer',
+    color: 'from-emerald-500 to-teal-500',
+  },
+];
