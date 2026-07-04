@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center hero-bg overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20">
+    <section className="relative min-h-[90vh] flex items-center justify-center hero-bg overflow-hidden pt-24 pb-12 sm:pt-32 sm:pb-20">
       {/* Grid bg overlay */}
       <div className="absolute inset-0 grid-pattern opacity-40" />
 
@@ -23,7 +23,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-[2.1rem] sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.05] mb-5 sm:mb-6 text-white">
+            <h1 className="text-[2.1rem] sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.15] md:leading-[1.05] mb-5 sm:mb-6 text-white">
               Instant Solutions <br />
               for your <span className="gradient-text">Business.</span>
             </h1>

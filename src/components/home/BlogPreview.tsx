@@ -41,7 +41,7 @@ export default function BlogPreview() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-8">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="blog-card block group">
               {/* Image Preview Mockup */}

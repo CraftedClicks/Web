@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-8">
           {reasons.map((reason) => (
             <div key={reason.title} className="why-card p-8 bg-slate-900/50 border border-white/5 rounded-2xl hover:border-cyan-500/20 transition-all flex flex-col items-center text-center">
               <div className="text-4xl mb-5">{reason.icon}</div>

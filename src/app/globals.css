@@ -36,9 +36,10 @@ body {
   overflow-x: hidden;
 }
 
-img, svg {
+img, video, svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, p {
@@ -245,49 +246,136 @@ h1, h2, h3, h4, p {
   -webkit-backdrop-filter: blur(20px);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   body {
     font-size: 15px;
   }
 
+  /* Adjust section paddings globally */
+  section[class*="py-24"] {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+  section[class*="py-20"] {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  section[class*="py-16"] {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  section[class*="pb-24"] {
+    padding-bottom: 3.5rem !important;
+  }
+
   h1 {
-    font-size: clamp(2.1rem, 8vw, 2.85rem);
-    line-height: 1.05;
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    line-height: 1.15;
   }
 
   h2 {
-    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 4.5vw, 1.5rem);
+    line-height: 1.3;
   }
 
   p {
-    font-size: 0.97rem;
-    line-height: 1.7;
+    font-size: 0.98rem;
+    line-height: 1.65;
   }
 
+  /* Tap target enhancements for interactive elements */
   button,
-  a[class*="rounded-full"],
-  .mobile-nav a {
+  .btn-glow,
+  .mobile-nav a,
+  .portfolio-card a,
+  .why-card a,
+  .service-card a,
+  .form-input,
+  select,
+  textarea {
     min-height: 44px;
   }
 
+  /* Keep specific small inline elements compact */
+  span.tag,
+  .tag,
+  .mobile-nav a,
+  footer a,
+  nav a {
+    min-height: auto;
+  }
+
+  /* Reduce card paddings on tablet/mobile */
+  .service-card,
+  .why-card,
+  .testimonial-card {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  section[class*="py-24"] {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  section[class*="py-20"] {
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+  section[class*="py-16"] {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  section[class*="pb-24"] {
+    padding-bottom: 2.5rem !important;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 6.5vw, 1.7rem);
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: clamp(1.15rem, 5vw, 1.35rem);
+  }
+
+  p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
   .whatsapp-btn {
-    width: 52px;
-    height: 52px;
-    bottom: 20px;
-    left: 20px;
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    left: 16px;
   }
 
   .scroll-top-btn {
-    width: 46px;
-    height: 46px;
-    bottom: 20px;
-    right: 20px;
+    width: 44px;
+    height: 44px;
+    bottom: 16px;
+    right: 16px;
   }
 
   .whatsapp-btn svg,
   .scroll-top-btn svg {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.1rem;
+    height: 1.1rem;
   }
 }
 

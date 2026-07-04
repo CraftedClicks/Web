@@ -52,7 +52,7 @@ export default function PortfolioPage() {
                   <div className="flex gap-3">
                     <Link
                       href={`/portfolio/${project.slug}`}
-                      className="text-xs text-[#94a3b8] hover:text-white bg-white/5 border border-white/10 px-3 py-1.5 rounded-full transition-all"
+                      className="text-xs text-[#94a3b8] hover:text-white bg-white/5 border border-white/10 px-4 py-2.5 rounded-full transition-all flex items-center justify-center min-h-[44px]"
                     >
                       Case Study
                     </Link>
@@ -61,7 +61,7 @@ export default function PortfolioPage() {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 px-3 py-1.5 rounded-full font-semibold transition-all shadow-[0_0_10px_rgba(6,182,212,0.3)]"
+                        className="text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 px-4 py-2.5 rounded-full font-semibold transition-all shadow-[0_0_10px_rgba(6,182,212,0.3)] flex items-center justify-center min-h-[44px]"
                       >
                         Live Demo &rarr;
                       </a>

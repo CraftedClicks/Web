@@ -6,7 +6,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Left Column - Mockup Graphic */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative p-4 bg-white/5 border border-white/10 rounded-2xl shadow-2xl overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-blue-500/10 opacity-30" />
               <div className="absolute inset-0 grid-pattern opacity-10" />
@@ -28,7 +28,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column - Text Info */}
-          <div className="lg:col-span-6 text-left">
+          <div className="lg:col-span-6 text-left order-1 lg:order-2">
             <span className="tag mb-4">Who We Are</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-4 mb-6 leading-tight">
               About Our <span className="gradient-text">Website Building Company</span>

@@ -55,16 +55,20 @@ export default function Testimonials() {
             </div>
             
             {/* Dots */}
-            <div className="flex gap-2 mt-6 justify-center">
+            <div className="flex gap-1 mt-4 justify-center">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i === active ? 'w-8 bg-cyan-400' : 'w-2 bg-white/20 hover:bg-white/40'
-                  }`}
+                  className="w-11 h-11 flex items-center justify-center transition-all duration-300 group"
                   aria-label={`View testimonial ${i + 1}`}
-                />
+                >
+                  <span
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      i === active ? 'w-8 bg-cyan-400' : 'w-2 bg-white/20 group-hover:bg-white/40'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
           </div>

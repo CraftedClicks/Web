@@ -27,13 +27,13 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+          scrolled || menuOpen
             ? 'bg-[#020817]/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20'
             : 'bg-transparent'
         }`}
       >
         {/* Top Info Bar */}
-        <div className="bg-[#0f172a]/80 border-b border-white/5 text-[11px] sm:text-xs text-[#94a3b8] py-2 px-4 sm:px-6 lg:px-8">
+        <div className="hidden lg:block bg-[#0f172a]/80 border-b border-white/5 text-[11px] sm:text-xs text-[#94a3b8] py-2 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
               <a href="mailto:hello@craftedclicks.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
@@ -94,7 +94,7 @@ export default function Navbar() {
             {/* Mobile menu toggle */}
             <button
               id="mobile-menu-toggle"
-              className="lg:hidden text-[#cbd5e1] hover:text-white p-2.5 rounded-full hover:bg-white/10"
+              className="lg:hidden text-[#cbd5e1] hover:text-white w-11 h-11 flex items-center justify-center rounded-full hover:bg-white/10 shrink-0"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -113,29 +113,31 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <div className="mobile-nav fixed top-24 left-0 right-0 z-40 border-b border-white/5 lg:hidden">
-          <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-[#cbd5e1] hover:text-white transition-colors font-semibold py-3 border-b border-white/5 text-[0.95rem]"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+      <div
+        className={`mobile-nav fixed left-0 right-0 z-40 border-b border-white/5 lg:hidden transition-all duration-300 ease-in-out ${
+          menuOpen ? 'top-16 opacity-100 visible translate-y-0' : 'top-12 opacity-0 invisible -translate-y-4'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-3">
+          {navLinks.map((link) => (
             <Link
-              href="/contact"
-              className="mt-2 btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full text-center font-bold text-[0.95rem]"
+              key={link.href}
+              href={link.href}
+              className="text-[#cbd5e1] hover:text-white transition-colors font-semibold py-3.5 border-b border-white/5 text-[0.95rem] flex items-center min-h-[44px]"
               onClick={() => setMenuOpen(false)}
             >
-              Get a Quote
+              {link.label}
             </Link>
-          </div>
+          ))}
+          <Link
+            href="/contact"
+            className="mt-2 btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full text-center font-bold text-[0.95rem] flex items-center justify-center min-h-[44px]"
+            onClick={() => setMenuOpen(false)}
+          >
+            Get a Quote
+          </Link>
         </div>
-      )}
+      </div>
     </>
   );
 }
