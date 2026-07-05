@@ -10,7 +10,7 @@ export default function ContactCTA() {
         style={{ background: 'radial-gradient(ellipse, #06b6d4 0%, transparent 70%)' }}
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-4xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24 relative z-10 text-center">
         <span className="tag mb-4">Take Action</span>
         <h3 className="text-[#94a3b8] text-sm uppercase tracking-widest font-bold mb-3 mt-4">We Take Care Of Your Technology</h3>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white">

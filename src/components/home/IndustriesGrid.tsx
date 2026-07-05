@@ -26,10 +26,10 @@ export default function IndustriesGrid() {
       {/* Background abstract watermark/wave - simulated with CSS */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-[#eaf5f7] to-transparent rounded-full opacity-50 blur-3xl -translate-y-1/2 translate-x-1/4"></div>
       
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24 relative z-10">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0c7094]">
-            Industries we Served
+            Industries We Serve
           </h2>
         </div>
 

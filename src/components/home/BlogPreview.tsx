@@ -33,7 +33,7 @@ const posts = [
 export default function BlogPreview() {
   return (
     <section className="py-24 bg-[#0f172a]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24">
         <div className="text-center mb-16">
           <span className="tag mb-4">Latest Insights</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4 mb-4 text-white">

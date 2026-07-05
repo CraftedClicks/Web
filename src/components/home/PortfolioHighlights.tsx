@@ -7,7 +7,7 @@ export default function PortfolioHighlights() {
 
   return (
     <section className="py-24 bg-[#020817]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24">
         <div className="text-center mb-16">
           <span className="tag mb-4">Our Work</span>
           <h2 className="text-4xl md:text-5xl font-black mt-4 mb-4">

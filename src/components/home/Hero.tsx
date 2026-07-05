@@ -1,46 +1,50 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import LaptopPhoneMockup from './LaptopPhoneMockup';
+import HeroLeadForm from './HeroLeadForm';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center bg-white overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full h-full flex flex-col justify-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative bg-white overflow-hidden pt-36 pb-24 lg:pt-44 lg:pb-40">
+      {/* Container with generous padding on sides for breathing room */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24 relative z-10 w-full">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
           {/* Left Column - Content */}
-          <div className="text-left flex flex-col items-start pt-8 lg:pt-0">
+          <div className="lg:col-span-7 text-left flex flex-col items-start">
             {/* Headline */}
-            <h1 className="text-[#157da5] font-serif text-[2.5rem] sm:text-5xl md:text-[3.5rem] leading-[1.2] mb-1 font-bold">
-              Welcome To
+            <h1 className="text-[#126585] text-[2.75rem] sm:text-5xl md:text-[3.75rem] leading-[1.1] mb-4 font-black tracking-tight">
+              Websites That <br />
+              <span className="text-[#10b1e4]">Get You Clients</span>
             </h1>
-            <h2 className="text-[#10b1e4] font-serif text-[2.5rem] sm:text-5xl md:text-[3.5rem] font-bold leading-[1.2] mb-4">
-              SoftCrowd Technologies
-            </h2>
             
             {/* Subheadline */}
-            <p className="text-[#157da5] font-semibold text-[1.1rem] sm:text-xl md:text-2xl mb-10 tracking-wide">
-              Instant Solutions for your Business!
+            <p className="text-[#157da5] font-semibold text-lg sm:text-xl md:text-[22px] mb-8 leading-relaxed max-w-2xl">
+              Custom Web & App Development for Startups and SMEs in India.
             </p>
 
-            {/* CTA */}
-            <Link
-              href="/contact"
-              className="bg-[#126585] text-white px-8 py-3 rounded-[6px] text-base font-medium hover:bg-[#0f5470] transition-colors shadow-sm"
-            >
-              Contact Us
-            </Link>
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-[#126585] text-white px-8 py-3.5 rounded-full text-base font-bold hover:bg-[#0f5470] hover:shadow-lg transition-all shadow-md min-w-[170px]"
+              >
+                Get Free Quote
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center justify-center bg-white text-[#126585] border-2 border-[#126585] px-8 py-3.5 rounded-full text-base font-bold hover:bg-slate-50 transition-all min-w-[170px]"
+              >
+                View Our Work
+              </Link>
+            </div>
+
+            {/* Audit Lead Form */}
+            <HeroLeadForm />
           </div>
 
-          {/* Right Column - Illustration */}
-          <div className="relative flex justify-center lg:justify-end animate-fade-in-up">
-            <div className="relative w-full max-w-[500px] aspect-[4/3]">
-              <Image 
-                src="/hero_illustration.png" 
-                alt="Web Development Illustration"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+          {/* Right Column - Laptop/Phone CSS Mockup */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+            <LaptopPhoneMockup />
           </div>
         </div>
       </div>
