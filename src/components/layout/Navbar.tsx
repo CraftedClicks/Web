@@ -26,40 +26,35 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
           scrolled || menuOpen 
-            ? 'bg-[#116b8b]/95 backdrop-blur-md shadow-md shadow-black/10' 
-            : 'bg-[#116b8b]'
+            ? 'bg-dark/95 backdrop-blur-md shadow-md border-white/5' 
+            : 'bg-dark border-transparent'
         }`}
       >
         {/* Centered navigation container aligning with the page content margins */}
         <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24 relative flex items-center justify-between h-[76px]">
           
-          {/* Logo Section with slanted white background that extends to the left edge of screen */}
+          {/* Logo Section */}
           <div className="relative flex items-center h-full z-10">
-            {/* Absolute background extending left off-screen */}
-            <div 
-              className="absolute left-[-100vw] right-[-48px] top-0 bottom-0 bg-white z-0"
-              style={{ clipPath: 'polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0% 100%)' }}
-            />
             {/* Logo Links */}
             <Link href="/" className="relative z-10 flex items-center gap-2 group shrink-0 pr-12">
-              <div className="flex items-center justify-center w-8 h-8 md:w-[38px] md:h-[38px] bg-[#677788] text-[#1eb9eb] rounded-[4px] text-2xl font-black italic relative overflow-hidden">
+              <div className="flex items-center justify-center w-8 h-8 md:w-[38px] md:h-[38px] bg-slate-900 border border-white/10 text-primary rounded-[4px] text-2xl font-black italic relative overflow-hidden">
                 <span className="z-10 relative left-[1px]">C</span>
-                <div className="absolute w-full h-[6px] bg-[#1eb9eb] bottom-0 left-0 opacity-80"></div>
+                <div className="absolute w-full h-[6px] bg-primary bottom-0 left-0 opacity-80"></div>
               </div>
               <div className="flex flex-col leading-none mt-1">
-                <span className="text-lg md:text-[20px] font-extrabold text-[#0da0d1] tracking-tight mb-[1px]">
+                <span className="text-lg md:text-[20px] font-extrabold text-white tracking-tight mb-[1px] group-hover:text-primary transition-colors">
                   CRAFTEDCLICKS
                 </span>
-                <span className="text-[9px] md:text-[10px] tracking-[0.25em] text-[#8e99a3] uppercase font-semibold">
+                <span className="text-[9px] md:text-[10px] tracking-[0.25em] text-slate-400 uppercase font-semibold">
                   Technologies
                 </span>
               </div>
             </Link>
           </div>
 
-          {/* Navigation Links Section (Teal background area) */}
+          {/* Navigation Links Section */}
           <div className="relative z-10 flex items-center justify-end">
              {/* Desktop nav */}
              <div className="hidden lg:flex items-center gap-6 xl:gap-8 mt-1">
@@ -67,7 +62,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="flex items-center gap-1 text-white hover:text-cyan-200 transition-colors duration-200 font-medium text-[15px]"
+                  className="flex items-center gap-1 text-white hover:text-primary transition-colors duration-200 font-medium text-[15px]"
                 >
                   {link.label}
                   {link.hasDropdown && <ChevronDown className="w-4 h-4 ml-[-2px] opacity-80" />}
@@ -75,12 +70,14 @@ export default function Navbar() {
               ))}
               
               {/* Sticky Header Conversion Button: Book a Call */}
-              <Link
-                href="/contact"
-                className="bg-white text-[#116b8b] hover:bg-slate-50 px-5 py-2 rounded-full text-xs font-bold transition-all shadow-sm ml-4 shrink-0"
+              <a
+                href="https://calendly.com/craftedclicks"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-white hover:bg-blue-600 px-5 py-2 rounded-full text-xs font-bold transition-all shadow-sm ml-4 shrink-0 btn-active"
               >
                 Book a Call
-              </Link>
+              </a>
             </div>
             
             {/* Mobile menu toggle */}
@@ -114,7 +111,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-gray-700 hover:text-[#0da0d1] transition-colors font-medium py-3 border-b border-gray-50 flex items-center justify-between"
+              className="text-gray-700 hover:text-primary transition-colors font-medium py-3 border-b border-gray-50 flex items-center justify-between"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -122,13 +119,15 @@ export default function Navbar() {
             </Link>
           ))}
           {/* Mobile CTA */}
-          <Link
-            href="/contact"
-            className="bg-[#116b8b] text-white hover:bg-[#0f5470] px-5 py-3 rounded-xl text-center text-sm font-bold transition-all shadow-md mt-2 w-full flex items-center justify-center min-h-[44px]"
+          <a
+            href="https://calendly.com/craftedclicks"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-white hover:bg-blue-600 px-5 py-3 rounded-xl text-center text-sm font-bold transition-all shadow-md mt-2 w-full flex items-center justify-center min-h-[44px] btn-active"
             onClick={() => setMenuOpen(false)}
           >
             Book a Call
-          </Link>
+          </a>
         </div>
       </div>
     </>

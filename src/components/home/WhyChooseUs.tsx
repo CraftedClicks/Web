@@ -18,24 +18,24 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-[#020817]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24">
+    <section className="py-20 px-5 bg-dark border-b border-white/5">
+      <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <span className="tag mb-4">Core Commitments</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-4 mb-4 text-white">
             Why Choose Our <span className="gradient-text">Top Website Developers</span>
           </h2>
-          <p className="text-[#94a3b8] text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             We hold ourselves to the highest standards of execution, speed, and transparency.
           </p>
         </div>
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-8">
           {reasons.map((reason) => (
-            <div key={reason.title} className="why-card p-8 bg-slate-900/50 border border-white/5 rounded-2xl hover:border-cyan-500/20 transition-all flex flex-col items-center text-center">
+            <div key={reason.title} className="why-card p-8 bg-slate-900/50 border border-white/5 rounded-2xl hover:border-primary/20 transition-all flex flex-col items-center text-center">
               <div className="text-4xl mb-5">{reason.icon}</div>
               <h3 className="text-base font-bold text-white mb-4 tracking-wide">{reason.title}</h3>
-              <p className="text-[#64748b] text-sm leading-relaxed">{reason.description}</p>
+              <p className="text-slate-400 text-sm leading-relaxed">{reason.description}</p>
             </div>
           ))}
         </div>

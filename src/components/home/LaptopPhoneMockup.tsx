@@ -32,7 +32,7 @@ export default function LaptopPhoneMockup() {
           {/* Mock Website Layout */}
           <div className="flex-grow flex flex-col overflow-y-auto">
             {/* Header */}
-            <div className="bg-[#116b8b] text-white px-3 py-2 flex justify-between items-center">
+            <div className="bg-dark text-white px-3 py-2 flex justify-between items-center">
               <div className="text-[10px] font-bold tracking-tight">CRAFTEDCLICKS</div>
               <div className="flex gap-2 text-[8px] opacity-80">
                 <span>Home</span>
@@ -44,27 +44,27 @@ export default function LaptopPhoneMockup() {
             <div className="bg-slate-50 p-4 border-b border-slate-100 text-center">
               <div className="w-3/4 h-3 bg-slate-800 rounded mx-auto mb-2"></div>
               <div className="w-1/2 h-2 bg-slate-400 rounded mx-auto mb-3"></div>
-              <div className="w-16 h-4 bg-cyan-500 rounded mx-auto"></div>
+              <div className="w-16 h-4 bg-primary rounded mx-auto"></div>
             </div>
             {/* Content Cards */}
             <div className="p-3 grid grid-cols-3 gap-2">
               <div className="p-2 border border-slate-100 rounded bg-white space-y-1.5 shadow-sm">
-                <div className="w-5 h-5 rounded bg-cyan-100 flex items-center justify-center">
-                  <Shield className="w-3 h-3 text-cyan-600" />
+                <div className="w-5 h-5 rounded bg-blue-50 flex items-center justify-center">
+                  <Shield className="w-3 h-3 text-primary" />
                 </div>
                 <div className="w-full h-2 bg-slate-200 rounded"></div>
                 <div className="w-2/3 h-1.5 bg-slate-100 rounded"></div>
               </div>
               <div className="p-2 border border-slate-100 rounded bg-white space-y-1.5 shadow-sm">
-                <div className="w-5 h-5 rounded bg-amber-100 flex items-center justify-center">
-                  <RefreshCw className="w-3 h-3 text-amber-600" />
+                <div className="w-5 h-5 rounded bg-blue-50 flex items-center justify-center">
+                  <RefreshCw className="w-3 h-3 text-primary" />
                 </div>
                 <div className="w-full h-2 bg-slate-200 rounded"></div>
                 <div className="w-2/3 h-1.5 bg-slate-100 rounded"></div>
               </div>
               <div className="p-2 border border-slate-100 rounded bg-white space-y-1.5 shadow-sm">
-                <div className="w-5 h-5 rounded bg-blue-100 flex items-center justify-center">
-                  <Monitor className="w-3 h-3 text-blue-600" />
+                <div className="w-5 h-5 rounded bg-blue-50 flex items-center justify-center">
+                  <Monitor className="w-3 h-3 text-primary" />
                 </div>
                 <div className="w-full h-2 bg-slate-200 rounded"></div>
                 <div className="w-2/3 h-1.5 bg-slate-100 rounded"></div>
@@ -97,7 +97,7 @@ export default function LaptopPhoneMockup() {
           {/* Mobile Screen Mock content */}
           <div className="flex-grow flex flex-col pt-4 overflow-y-auto">
             {/* Header */}
-            <div className="bg-[#116b8b] text-white px-2 py-1.5 flex justify-between items-center text-[7px]">
+            <div className="bg-dark text-white px-2 py-1.5 flex justify-between items-center text-[7px]">
               <span className="font-bold">CRAFTEDCLICKS</span>
               <div className="w-3.5 h-2.5 bg-white/20 rounded flex items-center justify-center">☰</div>
             </div>
@@ -106,14 +106,14 @@ export default function LaptopPhoneMockup() {
               <div className="w-full h-2 bg-slate-800 rounded mb-1 mx-auto"></div>
               <div className="w-3/4 h-2 bg-slate-800 rounded mb-2.5 mx-auto"></div>
               <div className="w-5/6 h-1.5 bg-slate-400 rounded mb-3 mx-auto"></div>
-              <div className="w-12 h-3.5 bg-cyan-500 rounded-full mx-auto flex items-center justify-center text-white text-[5px] font-bold">
+              <div className="w-12 h-3.5 bg-primary rounded-full mx-auto flex items-center justify-center text-white text-[5px] font-bold">
                 AUDIT
               </div>
             </div>
             {/* Mobile Cards */}
             <div className="p-2 space-y-1.5 bg-white">
               <div className="p-1.5 border border-slate-100 rounded shadow-sm flex items-center gap-1.5">
-                <Smartphone className="w-2.5 h-2.5 text-cyan-600 shrink-0" />
+                <Smartphone className="w-2.5 h-2.5 text-primary shrink-0" />
                 <div className="flex-1 space-y-1">
                   <div className="w-12 h-1 bg-slate-300 rounded"></div>
                   <div className="w-8 h-1 bg-slate-200 rounded"></div>

@@ -22,13 +22,13 @@ const industries = [
 
 export default function IndustriesGrid() {
   return (
-    <section className="py-20 bg-[#f8fbfa] relative overflow-hidden">
+    <section className="py-20 px-5 bg-grey relative overflow-hidden border-b border-slate-100">
       {/* Background abstract watermark/wave - simulated with CSS */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-[#eaf5f7] to-transparent rounded-full opacity-50 blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-blue-50 to-transparent rounded-full opacity-50 blur-3xl -translate-y-1/2 translate-x-1/4"></div>
       
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 xl:px-24 relative z-10">
+      <div className="max-w-6xl mx-auto w-full relative z-10">
         <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-[2rem] font-bold text-[#0c7094]">
+          <h2 className="text-3xl sm:text-[2rem] font-black text-dark">
             Industries We Serve
           </h2>
         </div>
@@ -37,11 +37,11 @@ export default function IndustriesGrid() {
           {industries.map((industry, index) => (
             <div 
               key={industry.name} 
-              className="bg-white flex flex-col items-center justify-center p-8 sm:p-10 rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-[#f0f4f8] transform transition duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] animate-fade-in-up"
+              className="bg-white flex flex-col items-center justify-center p-8 sm:p-10 rounded-sm shadow-[0_4px_20px_rgba(10,25,47,0.04)] border border-[#f0f4f8] transform transition duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(10,25,47,0.08)] animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <industry.icon className="w-10 h-10 text-[#0c7094] mb-4 stroke-[1.5]" />
-              <div className="text-[15px] font-medium text-[#4a5568]">{industry.name}</div>
+              <industry.icon className="w-10 h-10 text-primary mb-4 stroke-[1.5]" />
+              <div className="text-[15px] font-medium text-slate-600">{industry.name}</div>
             </div>
           ))}
         </div>

@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ScrollToTop from '@/components/layout/ScrollToTop';
+import StickyBottomBar from '@/components/layout/StickyBottomBar';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,15 +14,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'CraftedClicks | Web & App Development Agency',
+    default: 'CraftedClicks | Website & App Development Agency in India',
     template: '%s | CraftedClicks',
   },
   description:
-    'CraftedClicks is a professional web and app development agency. We build modern, fast, and conversion-focused websites for startups, SMBs, and enterprises.',
+    'Custom Web & App Development for Startups and SMEs. Delivery in 14 Days.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://craftedclicks.com'),
   openGraph: {
-    title: 'CraftedClicks | Web & App Development Agency',
-    description: 'Modern websites and apps that drive real business growth.',
+    title: 'CraftedClicks | Website & App Development Agency in India',
+    description: 'Custom Web & App Development for Startups and SMEs. Delivery in 14 Days.',
     url: 'https://craftedclicks.com',
     siteName: 'CraftedClicks',
     locale: 'en_US',
@@ -29,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CraftedClicks | Web & App Development Agency',
-    description: 'Modern websites and apps that drive real business growth.',
+    title: 'CraftedClicks | Website & App Development Agency in India',
+    description: 'Custom Web & App Development for Startups and SMEs. Delivery in 14 Days.',
   },
   robots: { index: true, follow: true },
 };
@@ -45,16 +46,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={inter.variable}>
       <body className="antialiased flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pb-16 md:pb-0">{children}</main>
         <Footer />
         {/* Scroll to Top */}
         <ScrollToTop />
+        {/* Mobile Sticky Action Bar */}
+        <StickyBottomBar />
         {/* WhatsApp Float Button */}
         <a
-          href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919970968101'}`}
+          href="https://wa.me/9190970868101?text=Hi%20I%20want%20a%20free%20audit"
           target="_blank"
           rel="noopener noreferrer"
-          className="whatsapp-btn group"
+          className="whatsapp-btn group animate-whatsapp-bounce"
           aria-label="Chat on WhatsApp"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="shrink-0">
