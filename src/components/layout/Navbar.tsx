@@ -2,14 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { ChevronDown } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'Industries', href: '/industries' },
-  { label: 'Portfolio', href: '/portfolio' },
   { label: 'About Us', href: '/about' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'Services', href: '/services', hasDropdown: true },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Blogs', href: '/blog' },
+  { label: 'Careers', href: '/careers' },
   { label: 'Contact Us', href: '/contact' },
 ];
 
@@ -27,74 +28,48 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled || menuOpen
-            ? 'bg-[#020817]/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20'
-            : 'bg-transparent'
+          scrolled || menuOpen ? 'shadow-md shadow-black/10' : ''
         }`}
       >
-        {/* Top Info Bar */}
-        <div className="hidden lg:block bg-[#0f172a]/80 border-b border-white/5 text-[11px] sm:text-xs text-[#94a3b8] py-2 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center">
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
-              <a href="mailto:sourabh3527@gmail.com" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
-                <svg className="w-3.5 h-3.5 text-cyan-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                sourabh3527@gmail.com
-              </a>
-              <a href="tel:+919970968101" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
-                <svg className="w-3.5 h-3.5 text-cyan-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +91 99709 68101
-              </a>
-            </div>
-            <div className="hidden sm:block">
-              Instant Solutions for your Business
-            </div>
-          </div>
-        </div>
-
-        {/* Main Navbar */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-cyan-500/30 shrink-0">
-                C
+        <div className="flex w-full h-[76px] bg-[#116b8b]">
+          {/* Logo Section (White, Slanted) */}
+          <div className="relative flex items-center justify-start bg-white h-full pl-4 sm:pl-8 xl:pl-32 w-[60%] sm:w-[50%] md:w-[45%] xl:w-[35%] z-10"
+               style={{ clipPath: 'polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0% 100%)' }}>
+            <Link href="/" className="flex items-center gap-2 group shrink-0">
+              <div className="flex items-center justify-center w-8 h-8 md:w-[38px] md:h-[38px] bg-[#677788] text-[#1eb9eb] rounded-[4px] text-2xl font-black italic relative overflow-hidden">
+                <span className="z-10 relative left-[1px]">S</span>
+                <div className="absolute w-full h-[6px] bg-[#1eb9eb] bottom-0 left-0 opacity-80"></div>
               </div>
-              <span className="text-base sm:text-xl font-bold text-white">
-                Crafted<span className="gradient-text">Clicks</span>
-              </span>
+              <div className="flex flex-col leading-none mt-1">
+                <span className="text-lg md:text-[20px] font-extrabold text-[#0da0d1] tracking-tight mb-[1px]">
+                  SOFTCROWD
+                </span>
+                <span className="text-[9px] md:text-[10px] tracking-[0.25em] text-[#8e99a3] uppercase font-semibold">
+                  Technologies
+                </span>
+              </div>
             </Link>
+          </div>
 
-            {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-6">
+          {/* Navigation Links Section (Teal) */}
+          <div className="flex-1 flex items-center justify-end pr-4 sm:pr-8 xl:pr-32 relative">
+             {/* Desktop nav */}
+             <div className="hidden lg:flex items-center gap-6 xl:gap-8 mt-1">
               {navLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
-                  className="nav-link text-[#cbd5e1] hover:text-white transition-colors duration-200 font-semibold text-sm tracking-wide"
+                  className="flex items-center gap-1 text-white hover:text-cyan-200 transition-colors duration-200 font-medium text-[15px]"
                 >
                   {link.label}
+                  {link.hasDropdown && <ChevronDown className="w-4 h-4 ml-[-2px] opacity-80" />}
                 </Link>
               ))}
             </div>
-
-            {/* CTA */}
-            <div className="hidden lg:flex items-center gap-3">
-              <Link
-                href="/contact"
-                className="btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-5 py-2 rounded-full text-xs font-bold hover:from-cyan-400 hover:to-blue-400 transition-all"
-              >
-                Get a Quote
-              </Link>
-            </div>
-
+            
             {/* Mobile menu toggle */}
             <button
-              id="mobile-menu-toggle"
-              className="lg:hidden text-[#cbd5e1] hover:text-white w-11 h-11 flex items-center justify-center rounded-full hover:bg-white/10 shrink-0"
+              className="lg:hidden text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 shrink-0 ml-4"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -114,28 +89,22 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`mobile-nav fixed left-0 right-0 z-40 border-b border-white/5 lg:hidden transition-all duration-300 ease-in-out ${
-          menuOpen ? 'top-16 opacity-100 visible translate-y-0' : 'top-12 opacity-0 invisible -translate-y-4'
+        className={`mobile-nav fixed left-0 right-0 z-40 lg:hidden transition-all duration-300 ease-in-out bg-white border-b border-gray-100 ${
+          menuOpen ? 'top-[76px] opacity-100 visible translate-y-0 shadow-xl' : 'top-16 opacity-0 invisible -translate-y-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-3">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-2">
           {navLinks.map((link) => (
             <Link
-              key={link.href}
+              key={link.label}
               href={link.href}
-              className="text-[#cbd5e1] hover:text-white transition-colors font-semibold py-3.5 border-b border-white/5 text-[0.95rem] flex items-center min-h-[44px]"
+              className="text-gray-700 hover:text-[#0da0d1] transition-colors font-medium py-3 border-b border-gray-50 flex items-center justify-between"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
+              {link.hasDropdown && <ChevronDown className="w-4 h-4 text-gray-400" />}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="mt-2 btn-glow bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full text-center font-bold text-[0.95rem] flex items-center justify-center min-h-[44px]"
-            onClick={() => setMenuOpen(false)}
-          >
-            Get a Quote
-          </Link>
         </div>
       </div>
     </>
